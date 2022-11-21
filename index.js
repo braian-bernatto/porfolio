@@ -6,6 +6,7 @@ const aboutDescription = document.querySelector('#about-description')
 const skillsDescription = document.querySelector('#skills-description')
 const projectsDescription = document.querySelector('#projects-description')
 const contactDescription = document.querySelector('#contact-description')
+const imageContainer = document.querySelector('.image')
 
 const hi = `Hi! I'm Braian!`
 
@@ -36,10 +37,10 @@ radio.forEach(item => {
       ? (title.innerHTML = hi)
       : (title.innerHTML = item.dataset.title)
     item.id === 'skills'
-      ? skills.classList.add('on')
-      : skills.classList.remove('on')
+      ? (skills.classList.add('on'), imageContainer.classList.add('show'))
+      : (skills.classList.remove('on'), imageContainer.classList.remove('show'))
     item.id === 'contact'
-      ? form.classList.remove('hidden')
+      ? (form.classList.remove('hidden'), imageContainer.classList.add('show'))
       : form.classList.add('hidden')
   })
 })
