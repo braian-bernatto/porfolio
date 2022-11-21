@@ -1,8 +1,9 @@
 :root {
   --green-dark: #50a3a2;
-  --green-light: #53e3a6;
+  --green-light: #72ebe9;
   --shadow-primary: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  --shadow-secondary: 5px 7px 10px rgba(31, 38, 135, 0.37);
+  --shadow-secondary: 0 8px 22px 0 #50a3a2;
+  --shadow-terciary: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   --drop-shadow: drop-shadow(0.15rem 0.15rem 0.3rem rgba(130, 130, 130, 0.5));
 }
 
@@ -64,7 +65,7 @@ main {
   border: 5px solid rgba(191, 191, 191, 0.641);
   border-radius: 80px;
   padding: 20px 20px;
-  box-shadow: var(--shadow-secondary);
+  box-shadow: var(--shadow-terciary);
   position: absolute;
   top: -40px;
   background-color: white;
@@ -134,14 +135,65 @@ main {
   transform: translate(20px) rotate(45deg);
 }
 
+.menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 5px;
+  transform: translateX(100%);
+  height: 80%;
+}
+
+.menu__list {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.menu__list input {
+  display: none;
+}
+
+.menu__list li {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__list__item {
+  border-radius: 0.3rem;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: var(--shadow-terciary);
+}
+
+input[type='radio']:checked + label {
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--green-light);
+  box-shadow: var(--shadow-secondary);
+}
+
+.menu__list__item:hover {
+  color: var(--green-light);
+  transform: scale(1.07);
+}
+
 @media screen and (max-width: 600px) {
   main {
     width: 65vw;
     height: 50vh;
   }
 
-  .dev {
+  .dev,
+  .menu {
     font-size: 0.7rem;
+  }
+
+  .menu__list__item {
+    padding: 1rem 0.5rem;
   }
 
   .dev__name {
