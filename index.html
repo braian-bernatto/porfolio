@@ -17,11 +17,6 @@
   </head>
   <body>
     <main>
-      <section class="dev">
-        <h1 class="dev__name">Hi! I'm Braian!</h1>
-        <p class="dev__description">- Frontend Developer -</p>
-      </section>
-
       <nav class="menu">
         <ul class="menu__list">
           <li>
@@ -40,6 +35,7 @@
               type="radio"
               name="nav"
               id="skills"
+              data-title="Tech Stack"
             />
             <label class="menu__list__item" for="skills">Skills</label>
           </li>
@@ -49,6 +45,7 @@
               type="radio"
               name="nav"
               id="projects"
+              data-title="Projects"
             />
             <label class="menu__list__item" for="projects">Projects</label>
           </li>
@@ -58,11 +55,31 @@
               type="radio"
               name="nav"
               id="contact"
+              data-title="Contact Form"
             />
             <label class="menu__list__item" for="contact">Contact</label>
           </li>
         </ul>
       </nav>
+
+      <section class="dev">
+        <h1 class="dev__title">Hi! I'm Braian!</h1>
+        <p class="dev__description">
+          A <span>Frontend Developer</span> focused on building beautiful
+          designs with attention to detail and always ready to learn new things!
+        </p>
+        <p class="dev__description" id="skills-description">
+          This are some of the <span>technologies</span> that I'm familiar with
+        </p>
+        <p class="dev__description" id="contact-description">
+          Get in touch. I'll reply as soon as possible!
+        </p>
+        <form action="" method="post">
+          <input type="text" placeholder="name" />
+          <input type="email" placeholder="email" />
+          <button class="dev__button" type="submit">Send</button>
+        </form>
+      </section>
 
       <ul class="dev__skills">
         <li class="dev__skills__item dev__skills__item--1">

@@ -2,7 +2,7 @@
   --green-dark: #50a3a2;
   --green-light: #72ebe9;
   --shadow-primary: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  --shadow-secondary: 0 8px 22px 0 #50a3a2;
+  --shadow-secondary: 2px 2px 15px 2px #50a3a2;
   --shadow-terciary: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   --drop-shadow: drop-shadow(0.15rem 0.15rem 0.3rem rgba(130, 130, 130, 0.5));
 }
@@ -37,6 +37,10 @@ main {
   align-items: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .dev {
   position: absolute;
   top: 0;
@@ -47,7 +51,6 @@ main {
   border-radius: 0.3rem;
   display: flex;
   justify-content: center;
-  align-items: center;
   font-size: 2rem;
   flex-wrap: wrap;
   background: rgba(255, 255, 255, 0.25);
@@ -56,23 +59,40 @@ main {
   -webkit-backdrop-filter: blur(12.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  cursor: pointer;
   z-index: 100;
 }
 
-.dev__name {
+.dev__title {
   text-align: center;
-  border: 5px solid rgba(191, 191, 191, 0.641);
-  border-radius: 80px;
+  border-radius: 0.5rem;
   padding: 20px 20px;
   box-shadow: var(--shadow-terciary);
   position: absolute;
-  top: -40px;
+  top: -55px;
   background-color: white;
+}
+
+.dev__button {
+  text-align: center;
+  border: 5px solid rgba(191, 191, 191, 0.641);
+  border-radius: 80px;
+  padding: 2px 20px;
+  box-shadow: var(--shadow-terciary);
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
 }
 
 .dev__description {
   text-align: center;
+  padding: 4rem 5rem;
+  width: 100%;
+}
+
+.dev__description span {
+  box-shadow: var(--shadow-terciary);
+  padding: 0 10px;
+  border-radius: 1rem;
 }
 
 .dev__skills {
@@ -176,7 +196,8 @@ input[type='radio']:checked + label {
   box-shadow: var(--shadow-secondary);
 }
 
-.menu__list__item:hover {
+.menu__list__item:hover,
+.dev__button:hover {
   color: var(--green-light);
   transform: scale(1.07);
 }
@@ -192,11 +213,15 @@ input[type='radio']:checked + label {
     font-size: 0.7rem;
   }
 
+  .dev__description {
+    padding: 0 2rem;
+  }
+
   .menu__list__item {
     padding: 1rem 0.5rem;
   }
 
-  .dev__name {
+  .dev__title {
     padding: 5px 10px;
     top: -20px;
   }
