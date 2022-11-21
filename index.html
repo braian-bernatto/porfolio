@@ -64,20 +64,30 @@
 
       <section class="dev">
         <h1 class="dev__title">Hi! I'm Braian!</h1>
-        <p class="dev__description">
+        <p class="dev__description" id="about-description">
           A <span>Frontend Developer</span> focused on building beautiful
-          designs with attention to detail and always ready to learn new things!
+          designs with attention to detail and always ready to learn!
         </p>
-        <p class="dev__description" id="skills-description">
+        <p class="dev__description hidden" id="skills-description">
           This are some of the <span>technologies</span> that I'm familiar with
         </p>
-        <p class="dev__description" id="contact-description">
+        <p class="dev__description hidden" id="contact-description">
           Get in touch. I'll reply as soon as possible!
         </p>
-        <form action="" method="post">
-          <input type="text" placeholder="name" />
-          <input type="email" placeholder="email" />
-          <button class="dev__button" type="submit">Send</button>
+
+        <form class="form hidden" id="form" method="post">
+          <input
+            class="form__input form__name"
+            type="text"
+            placeholder="name"
+            required
+          />
+          <textarea
+            class="form__input form__message"
+            placeholder="Message"
+            required
+          ></textarea>
+          <button type="submit" class="dev__button">Send</button>
         </form>
       </section>
 
