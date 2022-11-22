@@ -9,6 +9,7 @@ const projectsDescription = document.querySelector('#projects-description')
 const contactDescription = document.querySelector('#contact-description')
 const imageContainer = document.querySelector('.image')
 const projectContainer = document.querySelector('.projects')
+const linksContainer = document.querySelector('.links')
 
 const hi = `Hi! I'm Braian!`
 
@@ -27,6 +28,7 @@ radio.forEach(item => {
     switch (item.id) {
       case 'about':
         aboutDescription.classList.remove('hidden')
+
         break
       case 'skills':
         skillsDescription.classList.remove('hidden')
@@ -46,8 +48,9 @@ radio.forEach(item => {
     }
 
     item.id === 'about'
-      ? (title.innerHTML = hi)
-      : (title.innerHTML = item.dataset.title)
+      ? ((title.innerHTML = hi), linksContainer.classList.remove('hidden'))
+      : ((title.innerHTML = item.dataset.title),
+        linksContainer.classList.add('hidden'))
     item.id === 'skills'
       ? (skills.classList.add('on'),
         imageContainer.classList.add('show'),
