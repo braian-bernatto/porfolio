@@ -314,6 +314,16 @@ input[type='radio']:checked + label {
     top: -20px;
   }
 
+  .dev__skills.on {
+    top: 2rem;
+    width: 30%;
+    height: 30%;
+  }
+
+  .dev__skills__name {
+    font-size: 0.7rem;
+  }
+
   .dev__skills__item {
     width: 50px;
     height: 50px;
