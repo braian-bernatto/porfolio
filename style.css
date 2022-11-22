@@ -3,7 +3,7 @@
   --green-light: #5ec8c7;
   --gray-light: rgba(117, 117, 117, 0.637);
   --shadow-primary: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  --shadow-secondary: 2px 2px 15px 2px #50a3a2;
+  --shadow-secondary: #50a3a2 0px 1px 2px 0px, #50a3a2 0px 2px 6px 2px;
   --shadow-terciary: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   --shadow-span: rgba(0, 0, 0, 0.12) 0px 1px 3px,
     rgba(0, 0, 0, 0.24) 0px 1px 2px;
@@ -275,6 +275,8 @@ input[type='radio']:checked + label {
 
 .form__message {
   height: 6.25rem;
+  max-height: 200px;
+  max-width: 486px;
 }
 
 @media (min-width: 1280px) and (min-height: 960px) {
