@@ -8,6 +8,7 @@ const skillsDescription = document.querySelector('#skills-description')
 const projectsDescription = document.querySelector('#projects-description')
 const contactDescription = document.querySelector('#contact-description')
 const imageContainer = document.querySelector('.image')
+const projectContainer = document.querySelector('.projects')
 
 const hi = `Hi! I'm Braian!`
 
@@ -31,6 +32,7 @@ radio.forEach(item => {
         skillsDescription.classList.remove('hidden')
         break
       case 'projects':
+        document.querySelector('.projects').classList.toggle('show')
         break
       case 'contact':
         contactDescription.classList.remove('hidden')
@@ -56,6 +58,9 @@ radio.forEach(item => {
     item.id === 'contact'
       ? (form.classList.remove('hidden'), imageContainer.classList.add('show'))
       : form.classList.add('hidden')
+    item.id === 'projects'
+      ? projectContainer.classList.add('show')
+      : projectContainer.classList.remove('show')
   })
 })
 
