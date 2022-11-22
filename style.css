@@ -149,6 +149,8 @@ main {
 
 .dev__skills__item img {
   transition: all 0.4s ease-in-out;
+  width: 100px;
+  height: 100px;
 }
 
 .dev__skills__name {
@@ -273,7 +275,7 @@ input[type='radio']:checked + label {
   height: 6.25rem;
 }
 
-@media (min-width: 1280px) and (min-height: 860px) {
+@media (min-width: 1280px) and (min-height: 960px) {
   .image {
     display: flex;
   }
@@ -303,6 +305,11 @@ input[type='radio']:checked + label {
 
   .form {
     min-width: 200px;
+    top: 0;
+  }
+
+  .form__message {
+    height: 4.5rem;
   }
 
   .form__input::placeholder {
@@ -324,7 +331,8 @@ input[type='radio']:checked + label {
     font-size: 0.7rem;
   }
 
-  .dev__skills__item {
+  .dev__skills__item,
+  .dev__skills__item img {
     width: 50px;
     height: 50px;
   }
