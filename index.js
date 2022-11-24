@@ -34,7 +34,6 @@ radio.forEach(item => {
         skillsDescription.classList.remove('hidden')
         break
       case 'projects':
-        document.querySelector('.projects').classList.toggle('show')
         break
       case 'contact':
         contactDescription.classList.remove('hidden')
@@ -62,8 +61,8 @@ radio.forEach(item => {
       ? (form.classList.remove('hidden'), imageContainer.classList.add('show'))
       : form.classList.add('hidden')
     item.id === 'projects'
-      ? projectContainer.classList.add('show')
-      : projectContainer.classList.remove('show')
+      ? projectContainer.classList.remove('hidden')
+      : projectContainer.classList.add('hidden')
   })
 })
 
