@@ -72,6 +72,13 @@ main {
   align-items: center;
 }
 
+.highlight {
+  box-shadow: var(--shadow-span);
+  padding: 0 10px;
+  border-radius: 1rem;
+  color: var(--green-dark);
+}
+
 .hidden {
   display: none !important;
 }
@@ -150,13 +157,6 @@ main {
   width: 100%;
   max-width: 700px;
   color: var(--gray-light);
-}
-
-.dev__description span {
-  box-shadow: var(--shadow-span);
-  padding: 0 10px;
-  border-radius: 1rem;
-  color: var(--green-dark);
 }
 
 .dev__skills {
@@ -376,7 +376,7 @@ input[type='radio']:checked + label {
   width: 100%;
   font-size: 0.9rem;
   font-weight: normal;
-  text-decoration: underline 2px var(--green-dark);
+  text-align: center;
 }
 
 .projects__description {
