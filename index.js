@@ -52,13 +52,14 @@ radio.forEach(item => {
         linksContainer.classList.add('hidden'))
     item.id === 'skills'
       ? (skills.classList.add('on'),
-        imageContainer.classList.add('show'),
+        imageContainer.classList.remove('hidden'),
         showNames(true))
       : (skills.classList.remove('on'),
-        imageContainer.classList.remove('show'),
+        imageContainer.classList.add('hidden'),
         showNames(false))
     item.id === 'contact'
-      ? (form.classList.remove('hidden'), imageContainer.classList.add('show'))
+      ? (form.classList.remove('hidden'),
+        imageContainer.classList.remove('hidden'))
       : form.classList.add('hidden')
     item.id === 'projects'
       ? projectContainer.classList.remove('hidden')
